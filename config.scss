@@ -1,0 +1,14 @@
+//S
+$s-text-decoration-line: line-through !default;
+$s-text-decoration-style: null !default;
+$s-text-decoration-color: null !default;
+//@mixin s-extra-style() {} //Create this mixin before import module when you want add some special style for element
+
+//Del
+$del-text-decoration-line: line-through !default;
+$del-text-decoration-style: null !default;
+$del-text-decoration-color: null !default;
+//@mixin del-extra-style() {} //Create this mixin before import module when you want add some special style for element
+
+//S Del
+//@mixin s-del-extra-style() {} //Create this mixin before import module when you want add some special style for element

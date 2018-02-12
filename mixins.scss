@@ -1,0 +1,43 @@
+//S
+//@mixin s-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin s-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, text-decoration-color);
+    @if mixin-exists(s-extra-colors-propertys) {
+        @include s-extra-colors-propertys($colors-map);
+    }
+}
+
+@mixin s-colors($colors-map) {
+    s {
+        @include s-colors-propertys($colors-map);
+    }
+}
+
+@mixin class-s-colors($class, $colors-map) {
+    s.#{$class} {
+        @include s-colors-propertys($colors-map);
+    }
+}
+
+//Del
+//@mixin del-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin del-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, text-decoration-color);
+    @if mixin-exists(del-extra-colors-propertys) {
+        @include del-extra-colors-propertys($colors-map);
+    }
+}
+
+@mixin del-colors($colors-map) {
+    del {
+        @include del-colors-propertys($colors-map);
+    }
+}
+
+@mixin class-del-colors($class, $colors-map) {
+    del.#{$class} {
+        @include del-colors-propertys($colors-map);
+    }
+}
